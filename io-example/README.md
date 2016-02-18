@@ -47,8 +47,43 @@
         * 字符流
             * 字符输入流 读取数据
             * 字符输出流 写出数据
-    
-    
+    * 字节流
+        * FileOutputStream
+            * 文件是否可用或能否可以被创建取决于基础平台。特别是某些平台一次只允许一个 FileOutputStream（或其他文件写入对象）打开文件进行写入
+            * FileOutputStream(File file)
+            * FileOutputStream(String name) 
+            * 创建字节输出流对象做了几件事情
+                * 调用系统功能去创建文件
+                * 创建对象
+                * 把直接输出流对象指向这个文件
+        * FileInputStream
+            * FileInputStream(File file) 
+            * FileInputStream(String name) 
+            * 读取的方式
+                * read() 一次读取一个字节
+                * read(byte[] b) 一次读取一个字节数组
+        * 在计算机中中文的存储分为两个字节
+            * 第一个字节是负数
+            * 第二个字节常见的是负数， 可能有正数， 不影响
+        * 字节流复制文本文件
+            * 复制中文不会出现乱码
+            * 在控制台输出会出现乱码
+        * 缓冲字节流
+            * BufferedInputStream
+            * BufferedOutputStream
+    * 字符流
+        * Writer
+            * OutputStreamWriter
+                * 写数据的5种方式
+                    * writer(int c); 写一个字符
+                    * writer(char[] cbuf); 写一个字符数组
+                    * writer(char[] cbuf, int off, int len); 写一个字符数组的一部分
+                    * writer(String str, int off, int len); 写一个字字符串的一部分
+        * Reader
+            * InputStreamReader
+                * InputStreamReader读取数据的两种方式
+                    * read()
+                    * read(char[] chs)
     
 # 面试题
 * 编译期异常和运行期异常的区别
