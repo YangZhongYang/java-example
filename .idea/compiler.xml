@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="io-example" />
+        <module name="thread-example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="io-example" target="1.5" />
+      <module name="thread-example" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
