@@ -17,6 +17,16 @@ public class ThreadJoinDemo {
             e.printStackTrace();
         }
         tj2.start();
+        try {
+            tj2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tj3.start();
+        try {
+            tj3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
